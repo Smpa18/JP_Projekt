@@ -1,0 +1,232 @@
+/* ============================================================
+   DOSSIER DETAIL - Styling
+   ============================================================ */
+
+.dossier-back {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.dossier-back:hover {
+    text-decoration: underline;
+}
+
+.dossier-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ----- Nachrichten ----- */
+.dossier-message {
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.dossier-message-succes {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.dossier-message-erreur {
+    background-color: var(--color-danger-light);
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
+
+.dossier-message-info {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary);
+}
+
+.dossier-message-succes {
+    background-color: #e6f4ea;
+    color: #2d6a4f;
+    border: 1px solid #a8d5b5;
+}
+
+/* ----- Info-Karte 4 Spalten ----- */
+.dossier-info-4col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dossier-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dossier-info-row-4 {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.dossier-info-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    min-width: 140px;
+}
+
+.dossier-info-value {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+/* Badge für Stade */
+.dossier-stade-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Nachrichten für Infos-Speicherung */
+.dossier-infos-message {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: var(--radius-md);
+}
+
+.dossier-infos-message-succes {
+    color: var(--color-success);
+    background-color: var(--color-success-light);
+}
+
+.dossier-infos-message-erreur {
+    color: var(--color-danger);
+    background-color: var(--color-danger-light);
+}
+
+/* ----- Actions-Karte — volle Breite ----- */
+.dossier-actions-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dossier-actions-card h3 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+/* ----- Action Bloc (ein einzelner Aktionsbereich) ----- */
+.action-bloc {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.action-bloc:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.action-bloc p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-text-muted);
+}
+
+.action-bloc button {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-bloc button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.action-bloc button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Sekundärer Button (Annuler etc.) */
+.action-secondary {
+    background-color: var(--color-surface) !important;
+    color: var(--color-text-muted) !important;
+    border: 1.5px solid var(--color-border) !important;
+}
+
+.action-secondary:hover {
+    background-color: var(--color-background) !important;
+}
+
+/* Danger Button (Verdict) */
+.action-danger {
+    background-color: var(--color-danger) !important;
+}
+
+.action-danger:hover {
+    background-color: #c0392b !important;
+}
+
+/* Mehrere Buttons nebeneinander */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.action-buttons select {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+}
+
+/* Qualification/Classification Dropdown */
+.dossier-qualification-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+/* Fallback wenn keine Action */
+.dossier-aucune-action {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}

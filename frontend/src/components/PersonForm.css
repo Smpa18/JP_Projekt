@@ -1,0 +1,67 @@
+/* ============================================================
+   PERSON-FORM - Styling (für Plaignant und Suspect)
+   ============================================================ */
+
+.person-form-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    flex: 1;
+    min-width: 280px;
+}
+
+.person-form-title {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.person-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select {
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: white;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.form-field-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.form-field-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}

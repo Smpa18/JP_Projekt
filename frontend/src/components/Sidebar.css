@@ -1,0 +1,133 @@
+/* ============================================================
+   SIDEBAR - Styling
+   ============================================================ */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    /* DRC Flagge: diagonaler Streifen Blau → Gelb → Rot → Gelb → Blau */
+    background:
+            linear-gradient(
+                    135deg,
+                    #0050A0 0%,
+                    #0050A0 38%,
+                    #F7D618 38%,
+                    #F7D618 41%,
+                    #CE1126 41%,
+                    #CE1126 59%,
+                    #F7D618 59%,
+                    #F7D618 62%,
+                    #0050A0 62%,
+                    #0050A0 100%
+            );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+}
+
+.sidebar-header {
+    padding: 28px 24px 20px;
+    border-top: 4px solid var(--color-accent); /* Gelber Streifen oben */
+    border-bottom: 3px solid var(--color-danger); /* Roter Streifen unten */
+}
+
+.sidebar-title {
+    color: white;
+    font-size: 22px;
+}
+
+/* ----- Navigation ----- */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 16px;
+    flex: 1;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.15s ease;
+}
+
+.sidebar-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Hover-Effekt: leicht hellerer Hintergrund beim Drüberfahren */
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Aktive Seite: GUT erkennbar hervorgehoben mit Akzentfarbe */
+.sidebar-link.active {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+/* ----- Footer: Benutzer-Info + Abmelden ----- */
+.sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.sidebar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.sidebar-user-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.sidebar-user-text strong {
+    color: white;
+}
+
+.sidebar-user-text span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: 14px;
+}
+
+.sidebar-logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

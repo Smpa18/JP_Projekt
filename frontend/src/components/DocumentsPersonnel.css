@@ -1,0 +1,209 @@
+/* ============================================================
+   DOCUMENTS-PERSONNEL - Styling
+   (gleiche visuelle Sprache wie PiecesJointes.css)
+   ============================================================ */
+
+.docs-personnel-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.docs-personnel-card h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.docs-personnel-subtitle {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.docs-personnel-erreur {
+    color: var(--color-danger);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.docs-personnel-aucun {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+.docs-personnel-message {
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.docs-personnel-message-succes {
+    background-color: #e6f4ea;
+    color: #2d6a4f;
+}
+
+.docs-personnel-message-erreur {
+    background-color: #fdecea;
+    color: var(--color-danger);
+}
+
+/* ----- Liste der Dokumente ----- */
+.docs-personnel-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.doc-personnel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+}
+
+.doc-personnel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.doc-personnel-genre {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+}
+
+.doc-personnel-nom {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.doc-personnel-date {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.doc-personnel-commentaire {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.doc-personnel-supprimer {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.doc-personnel-supprimer:hover {
+    color: var(--color-danger);
+}
+
+/* ----- Upload-Formular ----- */
+.doc-upload-ligne {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.doc-upload-ligne input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.doc-upload-supprimer-ligne {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+.doc-upload-supprimer-ligne:hover {
+    color: var(--color-danger);
+}
+
+.doc-upload-ajouter-ligne {
+    width: 100%;
+    padding: 8px 14px;
+    background-color: var(--color-background);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.doc-upload-ajouter-ligne:hover {
+    background-color: var(--color-primary-light);
+}
+
+.doc-upload-envoyer {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.doc-upload-envoyer:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ----- Neuer Upload-Bloc (einfacher als vorher) ----- */
+.doc-upload-bloc {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doc-upload-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doc-upload-field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.doc-upload-field input[type="text"] {
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Zeigt die Namen der ausgewählten Dateien */
+.doc-upload-count {
+    font-size: 12px;
+    color: var(--color-primary);
+    margin-top: 4px;
+}

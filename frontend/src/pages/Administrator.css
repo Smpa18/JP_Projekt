@@ -1,0 +1,273 @@
+/* ============================================================
+   ADMINISTRATOR-SEITE - Styling
+   ============================================================ */
+
+.admin-title {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.admin-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+}
+
+/* ----- Umschalter zwischen den 2 Modi (wie Tabs) ----- */
+.admin-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.admin-tab {
+    padding: 10px 18px;
+    background-color: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.admin-tab-active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* ----- Suchleiste ----- */
+.admin-search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 420px;
+}
+
+.admin-search-bar input {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.admin-search-bar button {
+    padding: 10px 18px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.admin-search-bar button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ----- Formular-Karte (Bearbeiten / Neu anlegen) ----- */
+.admin-form-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    max-width: 700px;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.admin-form-grid .form-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+}
+
+.admin-form-grid .form-field input,
+.admin-form-grid .form-field select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.admin-button-primary {
+    padding: 12px 22px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.admin-button-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.admin-button-success {
+    padding: 12px 22px;
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.admin-button-danger {
+    padding: 12px 22px;
+    background-color: var(--color-danger);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.admin-message {
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    margin-bottom: 16px;
+    font-size: 14px;
+    max-width: 700px;
+}
+
+.admin-message-succes {
+    background-color: #e8f5ee;
+    color: var(--color-success);
+}
+
+.admin-message-erreur {
+    background-color: #fbeaea;
+    color: var(--color-danger);
+
+    /* Hinweis-Text, wenn die Rolle "Avocat" gewählt ist (kein Passwort nötig) */
+    .admin-hint {
+        background-color: var(--color-primary-light);
+        color: var(--color-primary-dark);
+        padding: 10px 14px;
+        border-radius: var(--radius-md);
+        font-size: 13px;
+        margin-bottom: 16px;
+    }
+
+    /* Kurzübersicht des gefundenen Mitarbeiters nach der Suche
+   (Nom, Rôle, Matricule, Instance) - wie im Mockup oben gezeigt */
+    .admin-found-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        background-color: var(--color-primary-light);
+        border-radius: var(--radius-md);
+        padding: 12px 16px;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+
+    /* ============================================================
+   VUE D'ENSEMBLE - Übersicht aller Mitarbeiter
+   ============================================================ */
+
+    /* Hauptcontainer der Übersicht */
+    .admin-vue-card {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-card);
+        padding: 20px;
+        margin-top: 20px;
+        overflow-x: auto; /* Tabelle scrollbar auf kleinen Bildschirmen */
+    }
+
+    /* Filter-Dropdown für die Instance */
+    .admin-vue-filter {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+
+    .admin-vue-filter label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text);
+    }
+
+    .admin-vue-filter select {
+        padding: 8px 12px;
+        font-size: 14px;
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-md);
+        min-width: 300px;
+    }
+
+    /* Anzahl der gefilterten Mitarbeiter */
+    .admin-vue-count {
+        font-size: 13px;
+        color: var(--color-text-muted);
+        margin-bottom: 12px;
+    }
+
+    /* Tabelle aller Mitarbeiter */
+    .admin-vue-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+    }
+
+    .admin-vue-table th {
+        background-color: var(--color-primary);
+        color: white;
+        padding: 10px 12px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .admin-vue-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text);
+    }
+
+    /* Jede zweite Zeile leicht grau einfärben (Zebra-Muster) */
+    .admin-vue-table tbody tr:nth-child(even) {
+        background-color: var(--color-background);
+    }
+
+    .admin-vue-table tbody tr:hover {
+        background-color: var(--color-primary-light);
+    }
+
+    /* Leere Tabelle */
+    .admin-vue-vide {
+        text-align: center;
+        color: var(--color-text-muted);
+        font-style: italic;
+        padding: 20px !important;
+    }
+
+    /* Aktiv/Inaktiv Status */
+    .admin-vue-actif {
+        color: #2d6a4f;
+        font-weight: 600;
+    }
+
+    .admin-vue-inactif {
+        color: var(--color-danger);
+        font-weight: 600;
+    }
+}

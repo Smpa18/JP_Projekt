@@ -1,0 +1,279 @@
+/* ============================================================
+   PLAINTE-FORMULAR MODIFIER - Styling
+   ============================================================ */
+
+.plainte-modifier-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plainte-modifier-message {
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+}
+.plainte-modifier-message-succes {
+    background-color: #e6f4ea;
+    color: #2d6a4f;
+    border: 1px solid #a8d5b5;
+}
+.plainte-modifier-message-erreur {
+    background-color: #fdecea;
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
+
+.plainte-modifier-section-titre {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--color-primary-light);
+}
+
+/* ============================================================
+   PLAIGNANT + SUSPECT NEBENEINANDER — 2 gleiche Spalten
+   ============================================================ */
+.plainte-zwei-spalten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .plainte-zwei-spalten {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Grid für Felder: 2 Spalten — breiter und besser lesbar */
+.plainte-modifier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.plainte-modifier-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.plainte-modifier-field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.plainte-modifier-field input,
+.plainte-modifier-field select {
+    padding: 9px 11px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.plainte-modifier-field input:focus,
+.plainte-modifier-field select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* Suspect-Block */
+.plainte-suspect-bloc {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    margin-bottom: 12px;
+    background-color: var(--color-surface);
+}
+
+.plainte-suspect-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.plainte-suspect-supprimer {
+    padding: 4px 10px;
+    background-color: var(--color-danger);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.plainte-ajouter-suspect {
+    padding: 9px 16px;
+    background-color: var(--color-background);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.plainte-ajouter-suspect:hover {
+    background-color: var(--color-primary-light);
+}
+
+/* Avocats */
+.plainte-avocat-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--color-border);
+}
+
+.plainte-avocat-section h5 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.plainte-avocat-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.plainte-avocat-input-row input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    min-width: 0;
+}
+
+.plainte-avocat-input-row button {
+    padding: 8px 14px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.plainte-avocat-erreur {
+    font-size: 12px;
+    color: var(--color-danger);
+    margin-bottom: 6px;
+}
+
+.plainte-avocat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.plainte-avocat-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-md);
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.plainte-avocat-tag button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary-dark);
+    font-size: 13px;
+    padding: 0;
+    line-height: 1;
+}
+
+/* ============================================================
+   TEXTFELDER — volle Breite von links bis rechts
+   ============================================================ */
+.plainte-description-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.plainte-description-card label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
+
+.plainte-textarea-grand {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    min-height: 160px;
+    display: block;
+}
+
+.plainte-textarea-grand:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* Aktions-Buttons */
+.plainte-modifier-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.plainte-modifier-actions button[type="submit"],
+.plainte-modifier-actions button:not([type="button"]) {
+    padding: 10px 22px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.plainte-modifier-actions button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.plainte-modifier-actions button[type="button"] {
+    padding: 10px 22px;
+    background-color: var(--color-surface);
+    color: var(--color-text-muted);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+}

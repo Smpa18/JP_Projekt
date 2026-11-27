@@ -1,0 +1,64 @@
+/* ============================================================
+   ACTIONS EN ATTENTE - Styling
+   (gleiche visuelle Sprache wie Dossiers.css)
+   ============================================================ */
+
+.actions-title {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.actions-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.actions-erreur {
+    color: var(--color-danger);
+    margin-bottom: 16px;
+}
+
+.actions-aucun {
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+
+.actions-table-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow-x: auto;
+}
+
+.actions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.actions-table th {
+    text-align: left;
+    padding: 14px 16px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.actions-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.actions-table tr:last-child td {
+    border-bottom: none;
+}
+
+.actions-table tr:hover {
+    background-color: var(--color-background);
+}
+
+.actions-row-clickable {
+    cursor: pointer;
+}

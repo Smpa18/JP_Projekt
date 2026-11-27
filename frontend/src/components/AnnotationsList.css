@@ -1,0 +1,132 @@
+/* ============================================================
+   ANNOTATIONS-LIST - Styling
+   ============================================================ */
+
+.annotations-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.annotations-card h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.annotations-erreur {
+    color: var(--color-danger);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.annotations-aucune {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+.annotations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.annotation-item {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+}
+
+.annotation-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.annotation-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.annotation-badge-publique {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.annotation-badge-personnelle {
+    background-color: #fdf0d5;
+    color: #8a6300;
+}
+
+.annotation-auteur {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.annotation-supprimer {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.annotation-supprimer:hover {
+    color: var(--color-danger);
+}
+
+.annotation-contenu {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+/* ----- Formular zum Hinzufügen ----- */
+.annotation-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.annotation-form-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.annotation-form-footer select {
+    flex: 1;
+    padding: 9px 12px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.annotation-form-footer button {
+    padding: 9px 18px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.annotation-form-footer button:hover {
+    background-color: var(--color-primary-dark);
+}

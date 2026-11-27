@@ -1,0 +1,122 @@
+/* ============================================================
+   ARCHIVES-SEITE - Styling
+   Gleicher Stil wie Dossiers.css aber mit zusätzlichen
+   Klassen für die aufklappbaren Dossier-Details.
+   ============================================================ */
+
+/* ----- Aufklappbare Detailansicht eines Dossiers ----- */
+.archives-detail {
+    background-color: var(--color-background);
+    border-top: 2px solid var(--color-primary-light);
+    padding: 24px;
+}
+
+/* ----- Eine Sektion innerhalb der Detailansicht -----
+   z.B. Plaignant, Suspects, Notifications, Pièces jointes */
+.archives-section {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    margin-bottom: 16px;
+}
+
+/* ----- Titel einer Sektion (z.B. "📋 Informations générales") ----- */
+.archives-section-titre {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* ----- Grid für Informations générales, Plaignant, Suspects -----
+   Zeigt Felder in 2-3 Spalten nebeneinander */
+.archives-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 24px;
+    font-size: 14px;
+}
+
+/* ----- Label vor dem Wert (z.B. "Nom :") ----- */
+.archives-label {
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-right: 4px;
+}
+
+/* ----- Langer Text (Description, Procès Verbal) ----- */
+.archives-texte {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    white-space: pre-wrap; /* erhält Zeilenumbrüche aus dem Textarea */
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+}
+
+/* ----- Tabelle für Notifications und Pièces jointes ----- */
+.archives-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.archives-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.archives-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.archives-table tr:last-child td {
+    border-bottom: none;
+}
+
+.archives-table tr:hover {
+    background-color: var(--color-background);
+}
+
+/* ----- Download Button für Notifications und Pièces jointes ----- */
+.archives-btn-download {
+    padding: 6px 12px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.archives-btn-download:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ----- Voir Button — öffnet Datei im Browser (neuer Tab) -----
+   Grüner Button damit man Download und Voir visuell unterscheiden kann */
+.archives-btn-voir {
+    padding: 6px 12px;
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.archives-btn-voir:hover {
+    opacity: 0.85;
+}

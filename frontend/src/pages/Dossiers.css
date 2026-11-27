@@ -1,0 +1,131 @@
+/* ============================================================
+   DOSSIERS-SEITE - Styling
+   ============================================================ */
+
+.dossiers-title {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.dossiers-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+/* ----- Suchformular ----- */
+.dossiers-search-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.dossiers-search-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dossiers-search-grid .form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.dossiers-search-grid .form-field input,
+.dossiers-search-grid .form-field select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.dossiers-search-button {
+    padding: 12px 24px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dossiers-search-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.dossiers-erreur {
+    color: var(--color-danger);
+    margin-bottom: 16px;
+}
+
+.dossiers-aucun {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* ----- Ergebnistabelle ----- */
+.dossiers-table-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow-x: auto; /* erlaubt horizontales Scrollen auf kleinen Bildschirmen */
+}
+
+.dossiers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.dossiers-table th {
+    text-align: left;
+    padding: 14px 16px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dossiers-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dossiers-table tr:last-child td {
+    border-bottom: none;
+}
+
+.dossiers-table tr:hover {
+    background-color: var(--color-background);
+}
+
+/* Zeigt einen Mauszeiger, damit klar ist, dass die Zeile klickbar ist
+   und f\u00fchrt zur Detailansicht (DossierDetail.jsx) */
+.dossiers-row-clickable {
+    cursor: pointer;
+}
+
+/* ----- Status-Punkt: zeigt auf einen Blick, ob ein Dossier
+   aktiv oder geschlossen ist - das "Signatur-Element" des Designs ----- */
+.status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-actif {
+    background-color: var(--color-success);
+}
+
+.status-ferme {
+    background-color: #9aa5b1;
+}

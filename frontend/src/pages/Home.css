@@ -1,0 +1,140 @@
+/* ============================================================
+   LOGIN-BILDSCHIRM (zentriert, modernes Karten-Design)
+   ============================================================ */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* DRC Flagge: diagonaler Streifen Blau → Rot → Blau mit gelbem Rand */
+    background:
+            linear-gradient(
+                    135deg,
+                    #0050A0 0%,
+                    #0050A0 38%,
+                    #F7D618 38%,
+                    #F7D618 41%,
+                    #CE1126 41%,
+                    #CE1126 59%,
+                    #F7D618 59%,
+                    #F7D618 62%,
+                    #0050A0 62%,
+                    #0050A0 100%
+            );
+}
+
+.login-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 48px 44px;
+    width: 380px;
+    max-width: 90%;
+    border-top: 5px solid var(--color-danger); /* Roter Streifen oben */
+}
+
+.login-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    margin-bottom: 32px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Große, klar lesbare Labels ÜBER den Feldern - das macht
+   das Formular für ungeübte Nutzer deutlich einfacher. */
+.login-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 6px;
+    margin-top: 18px;
+}
+
+.login-form input {
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.login-form input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.login-button {
+    margin-top: 28px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-md);
+}
+
+.login-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.login-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-erreur {
+    margin-top: 14px;
+    padding: 10px 12px;
+    background-color: #fbeaea;
+    color: var(--color-danger);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+}
+
+.login-forgot {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.login-forgot:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   BEGRÜSSUNGSBEREICH (nach dem Login)
+   ============================================================ */
+
+.home-welcome h2 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.home-role {
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.home-info-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    max-width: 600px;
+}

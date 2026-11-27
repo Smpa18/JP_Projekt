@@ -1,0 +1,192 @@
+/* ============================================================
+   GREFFIER-ACTIONS - Styling
+   ============================================================ */
+
+/* Greffier: max-width 600px bleibt */
+.greffier-actions-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+/* Procureur + PG: volle Breite wie alle anderen Karten */
+.procureur-actions-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.greffier-actions-card h3,
+.procureur-actions-card h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.greffier-message {
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.greffier-message-succes {
+    background-color: #e6f4ea;
+    color: #2d6a4f;
+}
+
+.greffier-message-erreur {
+    background-color: #fdecea;
+    color: var(--color-danger);
+}
+
+/* ----- Aktionsliste ----- */
+.greffier-actions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.greffier-action-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-primary);
+    transition: background-color 0.15s;
+}
+
+.greffier-action-item:hover {
+    background-color: var(--color-primary-light);
+}
+
+.greffier-action-item.actif {
+    background-color: var(--color-primary-light);
+    font-weight: 600;
+}
+
+.greffier-action-envoyer {
+    color: var(--color-accent) !important;
+    font-weight: 600;
+}
+
+/* Detail-Bereich der sich aufklappt — volle Breite */
+.greffier-action-detail {
+    padding: 14px 16px;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.greffier-aucune {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* ----- Mehrfach-Upload (Annexer au dossier) ----- */
+.annexer-ligne {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.annexer-ligne input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.annexer-supprimer-ligne {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px 8px;
+}
+
+.annexer-supprimer-ligne:hover {
+    color: var(--color-danger);
+}
+
+.annexer-ajouter-ligne {
+    padding: 8px 14px;
+    background-color: var(--color-background);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.annexer-ajouter-ligne:hover {
+    background-color: var(--color-primary-light);
+}
+
+.annexer-envoyer {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.annexer-envoyer:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ----- Pièces-Liste ----- */
+.pieces-liste-greffier {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.piece-ligne-greffier {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.piece-genre-g {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    min-width: 70px;
+}
+
+.piece-nom-g {
+    font-size: 13px;
+    flex: 1;
+}
+
+.piece-date-g {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}

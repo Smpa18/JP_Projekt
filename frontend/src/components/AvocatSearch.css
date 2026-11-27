@@ -1,0 +1,81 @@
+/* ============================================================
+   AVOCAT-SEARCH - Styling
+   ============================================================ */
+
+.avocat-search {
+    margin-top: 8px;
+}
+
+.avocat-search-bar {
+    display: flex;
+    gap: 8px;
+}
+
+.avocat-search-bar input {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.avocat-search-bar button {
+    padding: 10px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.avocat-search-bar button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.avocat-resultats {
+    list-style: none;
+    margin-top: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.avocat-resultats li {
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.avocat-resultats li:last-child {
+    border-bottom: none;
+}
+
+.avocat-resultats li:hover {
+    background-color: var(--color-primary-light);
+}
+
+.avocat-aucun {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.avocat-selectionne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+}
+
+.avocat-selectionne button {
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+}

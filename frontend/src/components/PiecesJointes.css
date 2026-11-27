@@ -1,0 +1,123 @@
+/* ============================================================
+   PIECES-JOINTES - Styling
+   (gleiche visuelle Sprache wie AnnotationsList.css)
+   ============================================================ */
+
+.pieces-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pieces-card h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.pieces-erreur {
+    color: var(--color-danger);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.pieces-aucune {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 14px;
+}
+
+.pieces-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.piece-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+}
+
+.piece-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.piece-genre {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+}
+
+.piece-nom {
+    font-size: 14px;
+}
+
+/* NEU: zeigt das Datum der Pièce neben Genre und Dateiname,
+   wie gewünscht ("Date, genre" sollen sichtbar sein). */
+.piece-date {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.piece-commentaire {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.piece-supprimer {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.piece-supprimer:hover {
+    color: var(--color-danger);
+}
+
+/* ----- Formular zum Hochladen ----- */
+.piece-form-row {
+    margin-bottom: 10px;
+}
+
+.piece-form-row input {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.piece-form button {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.piece-form button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.piece-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

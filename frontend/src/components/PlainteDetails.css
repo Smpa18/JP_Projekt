@@ -1,0 +1,61 @@
+/* ============================================================
+   PLAINTE-DETAILS - Styling
+   ============================================================ */
+
+.plainte-details-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.plainte-details-card h3 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.plainte-details-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.plainte-details-personne {
+    flex: 1;
+    min-width: 240px;
+    background-color: var(--color-background);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+}
+
+.plainte-details-personne h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.plainte-details-personne p {
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: var(--color-text);
+}
+
+.plainte-details-description {
+    background-color: var(--color-background);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+}
+
+.plainte-details-description h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+}
+
+.plainte-details-description p {
+    font-size: 14px;
+    color: var(--color-text);
+}

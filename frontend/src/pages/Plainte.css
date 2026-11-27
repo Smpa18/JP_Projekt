@@ -1,0 +1,371 @@
+/* ============================================================
+   PLAINTE - Styling (vollständig integriert & volle Breite)
+   ============================================================ */
+
+.plainte-form {
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container für Plaignant & Suspects nebeneinander */
+.plainte-zwei-spalten {
+    display: grid;
+    background-color: var(--color-background);
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Karten-Struktur (überall volle Breite) */
+.plainte-section-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* WICHTIG: Padding wird nicht zur Breite addiert */
+}
+
+.plainte-section-titre {
+    font-size: 17px;
+    margin-bottom: 14px;
+    color: var(--color-text-main);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+}
+
+/* Formular Grid */
+.plainte-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+    width: 100%; /* Erzwingt volle Breite innerhalb des Grids */
+}
+
+.form-field label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    width: 100%; /* Erzwingt volle Breite */
+    box-sizing: border-box; /* WICHTIG */
+    display: block;
+}
+
+/* Spezifisch für Textareas im Footer/Formular */
+.form-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.plainte-requis {
+    color: var(--color-danger);
+}
+
+/* Suspect Blöcke */
+.plainte-suspect-bloc {
+    background-color: var(--color-background);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.plainte-suspect-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.plainte-ajouter-suspect {
+    padding: 8px 14px;
+    background-color: var(--color-background);
+    border: 1.5px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.plainte-ajouter-suspect:hover {
+    background-color: var(--color-primary-light);
+}
+
+.plainte-submit {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.plainte-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Autocomplete Sektionen */
+.plainte-avocat-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+}
+
+.plainte-avocat-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    z-index: 10;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: var(--shadow-card);
+}
+
+.plainte-avocat-suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.plainte-avocat-suggestion-item:hover {
+    background-color: var(--color-primary-light);
+}
+
+.plainte-avocat-tag {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-primary-light);
+    padding: 4px 8px;
+    border-radius: var(--radius-md);
+    margin-right: 8px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.plainte-avocat-tag button {
+    background: none;
+    border: none;
+    margin-left: 6px;
+    cursor: pointer;
+    color: var(--color-text-muted);
+}
+
+.plainte-avocat-tag button:hover {
+    color: var(--color-danger);
+}
+
+.plainte-erreur {
+    background-color: #fdecea;
+    color: var(--color-danger);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   SECTION CARDS — Description, Observation, Charge/Relaxion
+============================================================ */
+
+.plainte-section-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 24px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.plainte-section-titre {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 14px;
+}
+
+/* Textarea — volle Breite, groß und gut lesbar */
+.plainte-textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+.plainte-textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* ============================================================
+   ZWEI SPALTEN LAYOUT — Plaignant + Suspects nebeneinander
+============================================================ */
+
+.plainte-zwei-spalten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .plainte-zwei-spalten {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   FORMULAR GRID — Felder in 2 Spalten
+============================================================ */
+
+.plainte-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.plainte-checkbox-field {
+    grid-column: 1 / -1;
+}
+
+/* ============================================================
+   SUBMIT BUTTON
+============================================================ */
+
+.plainte-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.plainte-submit {
+    padding: 12px 32px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.plainte-submit:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.plainte-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================================================
+   SONSTIGES
+============================================================ */
+
+.plainte-titre {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 24px;
+}
+
+.plainte-erreur {
+    color: var(--color-danger);
+    background-color: #fdecea;
+    border: 1px solid var(--color-danger);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.plainte-requis {
+    color: var(--color-danger);
+}
+
+.plainte-avocat-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.plainte-avocat-input-row input {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.plainte-avocat-input-row button {
+    padding: 8px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.plainte-avocat-erreur {
+    color: var(--color-danger);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.plainte-avocat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.plainte-form {
+    width: 100%;
+}
