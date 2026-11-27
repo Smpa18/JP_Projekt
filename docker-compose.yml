@@ -1,0 +1,18 @@
+# Startet die PostgreSQL-Datenbank für JusticePro.
+# Start:  docker compose up -d
+# Stopp:  docker compose down
+services:
+  db:
+    image: postgres:16
+    container_name: justicepro-db
+    environment:
+      POSTGRES_DB: justiceproDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: JusticePro
+    ports:
+      - "5433:5432"
+    volumes:
+      - justicepro-data:/var/lib/postgresql/data
+
+volumes:
+  justicepro-data:
